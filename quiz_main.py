@@ -160,12 +160,13 @@ def check_answer():
 def next_question():
     #''' задает случайный вопрос из списка '''
     window.total += 1
+        if...
     print('Статистика\n-Всего вопросов: ', window.total, '\n-Правильных ответов: ', window.score)
-    cur_question = randint(0, len(questions_list) - 1)  # нам не нужно старое значение, 
+    # cur_question = randint(0, len(questions_list) - 1)  # нам не нужно старое значение, 
                                                         # поэтому можно использовать локальную переменную! 
             # случайно взяли вопрос в пределах списка
             # если внести около сотни слов, то редко будет повторяться
-    q = questions_list[cur_question] # взяли вопрос
+    q = questions_list[window.total] # взяли вопрос
     ask(q) # спросили
 
 
