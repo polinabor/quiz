@@ -160,7 +160,17 @@ def check_answer():
 def next_question():
     #''' задает случайный вопрос из списка '''
     window.total += 1
-        if...
+       if window.total == 50:
+#''' Отобразить надпись "Вы молодцы, все вопросы пройдены!"
+        font = pygame.font.Font(None, 36)
+        text = font.render("Вы молодцы, все вопросы пройдены!", True, (0, 255, 0)) #''' рендерим надпись '''
+        text_rect = text.get_rect(center=(window.get_width() // 2, window.get_height() // 2)) #''' вычисляем позицию '''
+        window.blit(text, text_rect) #''' рисуем надпись '''
+        pygame.display.flip() #''' обновляем экран '''
+        break  #''' выйти из цикла '''
+    else:
+        
+        # ... остальной код для обновления экрана 
     print('Статистика\n-Всего вопросов: ', window.total, '\n-Правильных ответов: ', window.score)
     # cur_question = randint(0, len(questions_list) - 1)  # нам не нужно старое значение, 
                                                         # поэтому можно использовать локальную переменную! 
